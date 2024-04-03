@@ -6,11 +6,7 @@ const port = 3000,
     app = express(); // 상수 app에 express 애플리케이션 할당
 
 app
-    .get('/', (req, res) => { // 홈페이지에 GET 라우트 세팅
-        /**
-         * Listing 8.2 (p. 140)
-         * 요청 매개변수의 액세스
-         */
+    .get('/', (req, res) => { // 홈페이지에 GET 라우트 세팅      
         console.log(req.params);
         console.log(req.body);
         console.log(req.url);
@@ -19,5 +15,5 @@ app
         res.send('Hello World!'); // res.send로 서버에서 클라이언트의 응답 발행
     })
     .listen(port, () => { // 3000번 포트로 애플리케이션 셋업
-        console.log(`The Express server is listening on port: ${port}`);
+        console.log(`Express at http://localhost:${port}`);
     });
